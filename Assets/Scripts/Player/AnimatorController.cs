@@ -6,15 +6,18 @@ public class AnimatorController : MonoBehaviour
     public PlayerController playerController = null;
     private Animator animator = null;
 
+    private string trWalk = "Walk";
     private string trJump = "jump";
     private string trDead = "dead";
 
+    private int Walk;
     private int Jump;
     private int Dead;
 
     void Start()
     {
         animator = this.GetComponent<Animator>();
+        Walk = Animator.StringToHash(trWalk);
         Jump = Animator.StringToHash(trJump);
         Dead = Animator.StringToHash(trDead);
     }
